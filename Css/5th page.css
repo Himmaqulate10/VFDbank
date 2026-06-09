@@ -1,0 +1,930 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* ── HEADER ── */
+header {
+    padding: 20px 40px;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.173);
+    font-family: sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav img {
+    width: 150px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.links li {
+    font-size: 14px;
+    color: rgb(70, 83, 102);
+    white-space: nowrap;
+}
+
+.links li i {
+    margin-left: 4px;
+}
+
+
+.btn button {
+    padding: 12px 18px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #e31b54;
+    border-radius: 10px;
+    width: 140px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn span {
+    display: none;
+    font-size: 2rem;
+    color: #e31b54;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.btn a {
+    font-family: "Fixel Display", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+    color: rgb(255, 255, 255);
+}
+
+/* ── NAV LINK COLOURS ── */
+.vrewards a,
+.retail a,
+.business a,
+.banking a,
+.company1 a,
+.media a,
+.achieve a,
+.company1-dropdown a {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: rgb(112, 112, 112);
+}
+
+
+.vrewards {
+    position: relative;
+}
+
+.vreward-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    width: 200px;
+    padding: 16px 20px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s, visibility .2s;
+    z-index: 20;
+}
+
+.vreward-dropdown a {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(112, 112, 112);
+    line-height: 1.8;
+}
+
+.vrewards:hover .vreward-dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ── COMPANY MEGA-DROPDOWN ── */
+.company1-dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: min(880px, 92vw);
+    display: flex;
+    flex-direction: column;
+    z-index: 20;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s, visibility .2s;
+}
+
+.company1-dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-content h2,
+.media-dropdown h2 {
+    color: rgb(255, 2, 0);
+    font-weight: 700;
+    font-size: 15px;
+    padding-bottom: 1.5rem;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+    align-items: stretch;
+}
+
+/* remove absolute positioning on last wrapper1 — use grid instead */
+.wrapper > .wrapper1:last-child {
+    position: static;
+    width: auto;
+}
+
+.wrapper1 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+    min-width: 0;
+}
+
+.dropdown-item1 {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.icon img {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.about-us,
+.career,
+.culture,
+.investor,
+.legal,
+.leadership,
+.impact-text,
+.blog,
+.press {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.about-us h4,
+.culture h4,
+.career h4,
+.investor h4,
+.legal h4,
+.leadership h4,
+.blog h4,
+.press h4 {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.about-us p,
+.culture p {
+    font-family: "Fixel Display", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgb(94, 97, 101);
+    width: 100%;
+}
+
+.career p {
+    color: rgb(101, 101, 101);
+    font-size: 13px;
+    font-weight: 400;
+    width: 100%;
+    line-height: 1.5;
+}
+
+.investor p,
+.legal p,
+.leadership p {
+    color: rgb(101, 101, 101);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.img img {
+    border-radius: 8px;
+    width: 100%;
+}
+
+.img-text {
+    background-color: #f2f3f7d7;
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.impact-text {
+    padding-top: 1.2rem;
+}
+
+.impact-text h4 {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.impact-text p {
+    color: rgb(101, 101, 101);
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 80px;
+}
+
+.impact-text a {
+    font-weight: 700;
+    font-size: 1rem;
+    color: rgb(227, 27, 84);
+    padding-top: 0.6rem;
+    display: inline-block;
+}
+
+.blog p,
+.press p {
+    color: rgb(101, 101, 101);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 100%;
+}
+
+/* ── MEDIA DROPDOWN ── */
+.media {
+    position: relative;
+}
+
+.media-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: min(630px, 92vw);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    z-index: 20;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s, visibility .2s;
+    overflow: visible;
+}
+
+.media:hover .media-dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sec-column-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* remove absolute on last media wrapper1 */
+.sec-column-wrapper > .wrapper1:last-child {
+    position: static;
+    width: auto;
+}
+.value-all{
+    width: 60%;
+    margin: auto;
+    padding-top: 60px;
+}
+.value-all button{
+    width: 80px;
+    height: 20px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #273243;
+    color: white;
+  
+}
+.value-all h2{
+    font-family: "Fixel Display", sans-serif;
+font-size: 45px;
+font-weight: 700;
+line-height: 68px;
+color: rgb(16, 24, 40);
+text-align: center;
+margin-top: 30px;
+/* margin-bottom: ; */
+}
+.value-all p{
+    font-family: "Fixel Display", sans-serif;
+font-size: 16px;
+line-height: 25px;
+color: rgb(71, 84, 103);
+text-align: center;
+padding-top: 40px;
+width: 328px;
+margin: auto;
+}
+.value-bttn{
+    width: 100px;
+    margin: auto;
+}
+.value-all img{
+    width: 100%;
+    margin-top: 70px;
+}
+.value-all h1{
+    font-family: "Fixel Display", sans-serif;
+font-size: 45px;
+font-weight: 700;
+line-height: 68px;
+color: rgb(16, 24, 40);
+text-align: center;
+margin-top: 110px;
+}
+.boxxxx-all{
+    display: flex;
+    width: 60%;
+    margin: auto;
+    gap: 30px;
+    margin-top: 40px;
+}
+.boxx-11{
+    width: 450px;
+    height: 450px;
+    background-color: #f2e3e2;
+    border-radius: 20px;
+    gap: 20px;
+    padding-left: 20px;
+
+}
+.boxx-1{
+   width: 450px;
+    height: 450px;
+    background-color: #f2f4f7;
+    border-radius: 20px;
+    gap: 20px;
+    padding-left: 20px;
+  
+    
+}
+.boxx-11 h1, .boxx-1 h1{
+    font-family: "Fixel Display", sans-serif;
+font-size: 40px;
+font-weight: 700;
+line-height: 68px;
+color: rgb(16, 24, 40);
+text-align: left;
+/* width: 350px; */
+}
+.boxx-11 p, .boxx-1 p{
+    font-family: "Fixel Display", sans-serif;
+font-size: 14px;
+font-weight: 400;
+line-height: 25px;
+color: rgb(71, 84, 103);
+width: 350px;
+text-align: left;
+}
+
+/*  */
+.ready-sec{
+    width: 100%;
+    background-color: #eaecf0;
+    margin-top: 70px;
+}
+.all-ready{
+    width: 65%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.ready-txt h1{
+    font-family: "Fixel Display", sans-serif;
+font-size: 45px;
+font-weight: 700;
+line-height: 55px;
+color: rgb(16, 24, 40);
+width: 400px;
+}
+.ready-txt p{
+    font-family: "Fixel Display", sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+color: rgb(71, 84, 103);
+width: 500px;
+margin-top: 30px;
+}
+.ready-txt button{
+    width: 120px;
+    margin-top: 30px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #e31b54;
+    font-family: "Fixel Display", sans-serif;
+font-size: 13px;
+font-weight: 500;
+line-height: 13px;
+color: rgb(255, 255, 255);
+}
+.ready-img img{
+    width: 400px;
+}
+
+.main-footer {
+    background-image: url("../multimedia/Images/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    padding: 3.5rem 0 4rem;
+    box-sizing: border-box;
+    font-family: "Fixel Display", sans-serif;
+}
+
+.main-footer .footer-section {
+    width: 76%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3.5rem;
+    padding-top: 0;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    color: rgb(16, 24, 40);
+}
+
+.footer-column a,
+.footer-bottom p,
+.footer-bottom span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: rgb(16, 24, 40);
+}
+
+.social-column {
+    min-width: 250px;
+}
+
+.social-wrap {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.circle {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    background-color: #27364a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle i {
+    color: white;
+    font-size: 22px;
+}
+
+.footer-border {
+    width: 76%;
+    margin: 4rem auto 0;
+    border-bottom: 1px solid rgba(16, 24, 40, 0.12);
+}
+
+.footer-bottom {
+    width: 76%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 120px 1fr 0.72fr;
+    gap: 3rem;
+    padding-top: 3rem;
+    align-items: start;
+}
+
+.footer-logo img {
+    width: 100px;
+}
+
+.footer-legal {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.footer-legal p,
+.footer-contact p {
+    color: rgb(16, 24, 40);
+}
+
+.footer-links a,
+.bold-link {
+    color: rgb(16, 24, 40);
+    font-weight: 700;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.footer-contact a {
+    color: rgb(227, 27, 84);
+    font-weight: 700;
+}
+
+.license-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 0.6rem;
+}
+
+.license-row img {
+    height: 24px;
+    width: auto;
+}
+
+.license-divider {
+    width: 1px;
+    height: 24px;
+    background-color: rgba(16, 24, 40, 0.25);
+}
+
+/* ============================================================
+   RESPONSIVE STYLESHEET  —  "5th page"
+   Link this AFTER your main "5th page.css":
+   <link rel="stylesheet" href="/Css/responsive.css" />
+   ============================================================ */
+
+/* ── LARGE DESKTOP  (≤ 1280px) ── */
+@media (max-width: 1280px) {
+  .boxxxx-all {
+    width: 80%;
+  }
+  .value-all {
+    width: 75%;
+  }
+  .all-ready {
+    width: 80%;
+  }
+  .main-footer .footer-section,
+  .footer-bottom,
+  .footer-border {
+    width: 88%;
+  }
+}
+
+/* ── HEADER  (≤ 1087px) ── */
+@media (max-width: 1087px) {
+  /* Hide nav links, show hamburger */
+  .header-txt {
+    display: none;
+  }
+  .btn span {
+    display: inline;
+  }
+  .btn button {
+   display: none;
+  }
+}
+
+/* ── TABLET LANDSCAPE  (≤ 1024px) ── */
+@media (max-width: 1024px) {
+  /* VALUE SECTION */
+  .value-all {
+    width: 85%;
+  }
+  .value-all h2,
+  .value-all h1 {
+    font-size: 36px;
+    line-height: 52px;
+  }
+
+  /* VISION / MISSION BOXES */
+  .boxxxx-all {
+    width: 85%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .boxx-11,
+  .boxx-1 {
+    width: 100%;
+    height: auto;
+    padding: 24px;
+  }
+  .boxx-11 p,
+  .boxx-1 p {
+    width: 100%;
+  }
+
+  /* READY SECTION */
+  .all-ready {
+    width: 88%;
+    gap: 30px;
+  }
+  .ready-txt h1 {
+    font-size: 36px;
+    line-height: 46px;
+    width: 100%;
+  }
+  .ready-txt p {
+    width: 100%;
+  }
+  .ready-img img {
+    width: 320px;
+  }
+
+  /* FOOTER */
+  .main-footer .footer-section {
+    width: 90%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+  .footer-bottom {
+    width: 90%;
+    grid-template-columns: 100px 1fr;
+    gap: 2rem;
+  }
+  .footer-contact {
+    grid-column: 1 / -1;
+  }
+  .footer-border {
+    width: 90%;
+  }
+}
+
+/* ── TABLET PORTRAIT  (≤ 768px) ── */
+@media (max-width: 768px) {
+  /* VALUE SECTION */
+  .value-all {
+    width: 90%;
+    padding-top: 40px;
+  }
+  .value-all h2,
+  .value-all h1 {
+    font-size: 28px;
+    line-height: 42px;
+    margin-top: 20px;
+  }
+  .value-all p {
+    font-size: 14px;
+    width: 100%;
+    padding-top: 20px;
+  }
+  .value-all img {
+    margin-top: 40px;
+  }
+  .value-all h1 {
+    margin-top: 60px;
+  }
+
+  /* BOXES */
+  .boxxxx-all {
+    width: 90%;
+    margin-top: 30px;
+  }
+  .boxx-11 h1,
+  .boxx-1 h1 {
+    font-size: 30px;
+    line-height: 44px;
+  }
+
+  /* READY SECTION */
+  .all-ready {
+    width: 90%;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap: 32px;
+  }
+  .ready-txt h1 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .ready-img img {
+    width: 100%;
+    max-width: 360px;
+    display: block;
+    margin: auto;
+  }
+
+  /* FOOTER */
+  .main-footer .footer-section {
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .social-column {
+    grid-column: 1 / -1;
+  }
+  .footer-bottom {
+    width: 90%;
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+  .footer-logo img {
+    width: 80px;
+  }
+  .footer-border {
+    width: 90%;
+    margin-top: 2.5rem;
+  }
+}
+
+/* ── MOBILE  (≤ 480px) ── */
+@media (max-width: 480px) {
+  /* HEADER */
+  header {
+    padding: 16px 20px;
+  }
+  nav img {
+    width: 110px;
+  }
+
+  /* VALUE */
+  .value-all {
+    width: 92%;
+    padding-top: 30px;
+  }
+  .value-all h2,
+  .value-all h1 {
+    font-size: 22px;
+    line-height: 34px;
+  }
+  .value-all p {
+    font-size: 13px;
+  }
+  .value-bttn button {
+    font-size: 10px;
+    height: 22px;
+    width: 90px;
+  }
+
+  /* BOXES */
+  .boxxxx-all {
+    width: 92%;
+    gap: 20px;
+  }
+  .boxx-11,
+  .boxx-1 {
+    padding: 20px 16px;
+  }
+  .boxx-11 h1,
+  .boxx-1 h1 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .boxx-11 p,
+  .boxx-1 p {
+    font-size: 13px;
+    width: 100%;
+  }
+
+  /* READY */
+  .all-ready {
+    width: 92%;
+  }
+  .ready-txt h1 {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  .ready-txt p {
+    font-size: 14px;
+    margin-top: 16px;
+  }
+  .ready-txt button {
+    width: 110px;
+    height: 38px;
+    font-size: 12px;
+  }
+  .ready-img img {
+    max-width: 280px;
+  }
+
+  /* FOOTER */
+  .main-footer {
+    padding: 2.5rem 0 3rem;
+  }
+  .main-footer .footer-section {
+    width: 92%;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.8rem;
+  }
+  .footer-column h3 {
+    font-size: 15px;
+  }
+  .footer-column a,
+  .footer-bottom p,
+  .footer-bottom span {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .footer-bottom {
+    width: 92%;
+    padding-top: 2rem;
+    gap: 1.2rem;
+  }
+  .footer-legal p,
+  .footer-contact p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .circle {
+    height: 40px;
+    width: 40px;
+  }
+  .circle i {
+    font-size: 18px;
+  }
+  .footer-border {
+    width: 92%;
+    margin-top: 2rem;
+  }
+  .license-row {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+/* ── VERY SMALL MOBILE  (≤ 360px) ── */
+@media (max-width: 360px) {
+  .main-footer .footer-section {
+    grid-template-columns: 1fr;
+  }
+  .boxxxx-all {
+    width: 96%;
+  }
+  .value-all {
+    width: 96%;
+  }
+}
