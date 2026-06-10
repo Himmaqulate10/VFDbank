@@ -345,13 +345,12 @@ nav {
     gap: 2rem;
 }
 
-/* remove absolute on last media wrapper1 */
 .sec-column-wrapper > .wrapper1:last-child {
     position: static;
     width: auto;
 }
 
-/* ── SECTIONS base ── */
+
 section {
     display: flex;
     justify-content: space-between;
@@ -360,7 +359,7 @@ section {
     margin: auto;
 }
 
-/* ── HERO ── */
+
 .hero {
     gap: 3rem;
     overflow: hidden;
@@ -409,7 +408,7 @@ section {
     transform: translateY(20px);
 }
 
-/* ── TESTED ── */
+
 .tested {
     margin-top: 140px;
     margin: auto;
@@ -472,9 +471,10 @@ section {
     max-height: 100%;
     display: block;
     object-fit: contain;
+    background-color: #ffcccc;
 }
 
-/* ── SAVINGS ── */
+
 .savings {
     position: relative;
     width: 100%;
@@ -543,7 +543,7 @@ section {
     object-fit: cover;
 }
 
-/* ── COMPANY ── */
+
 .company {
     position: relative;
     width: 100%;
@@ -593,7 +593,7 @@ section {
 }
 
 .company-img img {
-    width: 460px;
+    width: 500px;
     max-width: 100%;
     height: auto;
     display: block;
@@ -614,7 +614,7 @@ section {
     cursor: pointer;
 }
 
-/* ── EXPLORE ── */
+
 .Explore {
     position: relative;
     width: 100%;
@@ -686,7 +686,7 @@ section {
     cursor: pointer;
 }
 
-/* ── FEATURE BOXES ── */
+
 .but h1 {
     text-align: center;
     font-family: "Fixel Display", sans-serif;
@@ -768,7 +768,7 @@ section {
     margin-top: 14px;
 }
 
-/* ── TESTIMONIALS ── */
+
 .but2 h1 {
     text-align: center;
     font-family: "Fixel Display", sans-serif;
@@ -863,7 +863,7 @@ section {
     width: auto;
 }
 
-/* ── V-MAG ── */
+
 .v-mag {
     width: min(88%, 1280px);
     margin: 120px auto 0;
@@ -954,7 +954,7 @@ section {
     transform: translateY(-20px);
 }
 
-/* ── FOOTER (old footer hidden) ── */
+
 .old-footer {
     display: none !important;
 }
@@ -1140,7 +1140,7 @@ section {
     }
 }
 
-/* ── ≤ 1100px ── */
+
 @media (max-width: 1100px) {
     .hero {
         width: 90%;
@@ -1155,7 +1155,7 @@ section {
         width: min(320px, 100%);
     }
 
-    /* tested: stack */
+    
     .tested-all {
         flex-direction: column;
         text-align: center;
@@ -1182,7 +1182,7 @@ section {
         width: min(400px, 80vw);
     }
 
-    /* savings / company / explore: stack */
+    
     .savings-all,
     .company-all,
     .Explore-all {
@@ -1221,12 +1221,12 @@ section {
         width: min(520px, 80vw);
     }
 
-    /* v-mag */
+    
     .v-img img {
         width: min(380px, 44vw);
     }
 
-    /* footer: 3-col */
+    
     .main-footer .footer-section {
         grid-template-columns: repeat(3, 1fr);
         width: 88%;
@@ -1247,7 +1247,7 @@ section {
     }
 }
 
-/* ── ≤ 900px ── */
+
 @media (max-width: 900px) {
     .hero {
         width: 90%;
@@ -1271,7 +1271,7 @@ section {
         margin-top: 50px;
     }
 
-    /* feature boxes: single col */
+    
     .all-box {
         grid-template-columns: 1fr;
         width: min(500px, 90%);
@@ -1281,7 +1281,7 @@ section {
         min-height: auto;
     }
 
-    /* v-mag: stack */
+    
     .text-img {
         flex-direction: column;
         align-items: flex-start;
@@ -1293,7 +1293,7 @@ section {
     }
 }
 
-/* ── ≤ 750px ── */
+
 @media (max-width: 750px) {
     header {
         padding: 14px 18px;
@@ -1311,7 +1311,7 @@ section {
         font-size: 1.9rem;
     }
 
-    /* hero: stack */
+    
     .hero {
         flex-direction: column;
         text-align: center;
@@ -1380,7 +1380,7 @@ section {
         width: min(240px, 100%);
     }
 
-    /* testimonials: stack */
+    
     .down-box {
         flex-direction: column;
         width: min(500px, 88%);
@@ -1390,7 +1390,7 @@ section {
         min-height: auto;
     }
 
-    /* footer: 2-col */
+    
     .main-footer .footer-section {
         grid-template-columns: repeat(2, 1fr);
         width: 90%;
@@ -1412,7 +1412,7 @@ section {
     }
 }
 
-/* ── ≤ 568px ── */
+
 @media (max-width: 568px) {
     .handsake img {
         display: none;
@@ -1438,7 +1438,7 @@ section {
         width: 100%;
     }
 
-    /* dropdown: clamp to viewport */
+    
     .dropdown-content,
     .media-dropdown {
         width: calc(100vw - 32px);
@@ -1467,7 +1467,7 @@ section {
         margin-top: 60px;
     }
 
-    /* footer: 1-col */
+    
     .main-footer .footer-section {
         grid-template-columns: 1fr;
         width: 88%;
@@ -1478,7 +1478,7 @@ section {
     }
 }
 
-/* ── ≤ 420px ── */
+
 @media (max-width: 420px) {
     header {
         padding-inline: 14px;
